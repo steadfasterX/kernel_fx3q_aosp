@@ -1,7 +1,8 @@
 # CONFIG_ARM_PATCH_PHYS_VIRT is not set
 
 # xdajog: make clear who build that kernel
-CONFIG_LOCALVERSION='_sediKERNEL-v2.0 \(by xdajog\) \(build on droiddev-vm\)'
+CONFIG_LOCALVERSION_AUTO=n
+#CONFIG_LOCALVERSION="-sediKERNEL-v2.0 xdajog@droiddev-vm"
 # xdajog: That may or may not needed by TWRP
 CONFIG_EXT4_FS_XATTR=y
 CONFIG_SECURITY_SELINUX=y

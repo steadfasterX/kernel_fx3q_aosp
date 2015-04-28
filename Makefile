@@ -1,7 +1,7 @@
 VERSION = 3
 PATCHLEVEL = 4
 SUBLEVEL = 0
-EXTRAVERSION =
+EXTRAVERSION = -sediKERNEL_v2.0 \(xdajog@droiddev\)
 NAME = Saber-toothed Squirrel
 
 # *DOCUMENTATION*
