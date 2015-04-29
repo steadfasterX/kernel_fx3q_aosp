@@ -1,26 +1,28 @@
 # CONFIG_ARM_PATCH_PHYS_VIRT is not set
 
-# xdajog: make clear who build that kernel
 CONFIG_LOCALVERSION_AUTO=n
 #CONFIG_LOCALVERSION="-sediKERNEL-v2.0 xdajog@droiddev-vm"
+# xdajog: version modding will be done in makefile now.
+
 # xdajog: That may or may not needed by TWRP
 CONFIG_EXT4_FS_XATTR=y
 CONFIG_SECURITY_SELINUX=y
-#xdajog: hardcoded stuff to fu... LG crappy the bootloader!!!!!
+# xdajog: hardcoded stuff to fu... LG crappy the bootloader!!!!!
 CONFIG_CMDLINE_BOOL=y
 CONFIG_CMDLINE_OVERRIDE=y
-CONFIG_CMDLINE="androidboot.hardware=fx3q user_debug=31 vmalloc=308M time lge.rev=rev_10 lcd_maker_id=primary gpt=enable lge.batt_info=ds2704_l is_battery_low=0 prox_cal_data=0 lge_handle_panic.hreset_enable=0 lge.r=feffef72_20 androidboot.emmc=true androidboot.serialno=1001bb4 androidboot.mode=chargerlogo lge.signed_image=false androidboot.baseband=msm zcache"
+CONFIG_CMDLINE="androidboot.hardware=fx3q user_debug=31 vmalloc=308M time lge.rev=rev_10 lcd_maker_id=primary gpt=enable lge.batt_info=ds2704_l is_battery_low=0 prox_cal_data=0 lge_handle_panic.hreset_enable=0 lge.r=feffef72_20 androidboot.emmc=true androidboot.serialno=1001bb4 androidboot.mode=chargerlogo lge.signed_image=false androidboot.baseband=msm"
 CONFIG_CMDLINE_FORCE=y
 CONFIG_CMDLINE_FROM_BOOTLOADER=n
 
-# those need zcache in the cmdline too:
-CONFIG_QCACHE=n
-CONFIG_ZCACHE=y
+# xdajog: those need zcache in the cmdline too:
+CONFIG_QCACHE=y
+#xdajog: zcache doesnt work?! nevertheless it seems to be not such a good solution as one reports that the CPU may be very busy because of compression etc
+#CONFIG_ZCACHE=y
 CONFIG_CLEANCACHE=y
+CONFIG_FRONTSWAP=y
 #CONFIG_CRYPTO_LZO=y
 CONFIG_ZSMALLOC=y
 #CONFIG_MMU=y
-CONFIG_ZRAM=y
          
 CONFIG_SYSVIPC=y
 CONFIG_IKCONFIG=y
